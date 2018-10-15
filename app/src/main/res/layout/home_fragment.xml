@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:defaultQueryHint="Search music"
+        app:queryHint="Search Music" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_music"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:id="@+id/error_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retry" />
+
+        <TextView
+            android:id="@+id/txtError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/nothing_to_show"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
