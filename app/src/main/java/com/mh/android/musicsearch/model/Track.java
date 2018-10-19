@@ -3,10 +3,12 @@ package com.mh.android.musicsearch.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Model of song track
  */
-public class Track {
+public class Track implements Serializable {
 
     @SerializedName("wrapperType")
     private String wrapperType;

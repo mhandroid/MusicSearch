@@ -1,13 +1,14 @@
 
 package com.mh.android.musicsearch.model;
 
+import java.io.Serializable;
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
 /**
  * Model class for song track
  */
-public class Music {
+public class Music implements Serializable {
 
     @SerializedName("resultCount")
     private Integer resultCount;
